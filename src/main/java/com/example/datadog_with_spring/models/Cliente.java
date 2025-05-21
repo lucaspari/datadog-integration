@@ -17,7 +17,8 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private String accountNumber;
+    @OneToOne
+    private Account account;
     private String name;
     private Double valor;
 }
